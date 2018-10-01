@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Upload creation</h1>
+
+    {{ form_start(form, {'attr': {'id': 'form_details'}}) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="Create" />
+    {{ form_end(form) }}
+
+    <a href="{{ path('login') }}" class="btn btn-primary my-2">Show uploads!</a>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/common.js') }}"></script>
+{% endblock %}

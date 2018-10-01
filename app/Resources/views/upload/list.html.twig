@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a href="{{ logout_path('main') }}">Logout</a>
+    <h1>Upload list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for upload in uploads %}
+            <tr>
+                <td><a href="{{ path('upload_show', { 'id': upload.id }) }}">{{ upload.id }}</a></td>
+                <td>{{ upload.author.name }}</td>
+                <td>{{ upload.author.surname }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('upload_show', { 'id': upload.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

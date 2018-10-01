@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a href="{{ logout_path('main') }}">Logout</a></br>
+    <a href="{{ path('upload_list') }}">Back to the list</a>
+    <h1>Image</h1>
+
+    <img src="{{ asset('uploads/images/' ~ upload.image) }}"></td>
+
+{% endblock %}
