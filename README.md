@@ -15,7 +15,7 @@ Requirements
 Usage
 ===========
 
-Upload your code to the production server.
+Upload code to the production server.
 
 Import database from repository.
 
